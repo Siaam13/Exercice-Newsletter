@@ -32,7 +32,7 @@ function getAllOrigins()
 /**
  * Ajoute un abonné à la liste des emails
  */
-function addSubscriber(string $email, string $prenom, string $nom, int $originId)
+function addSubscriber(string $email, string $firstname, string $lastname, int $originId)
 {
     // Construction du Data Source Name
     $dsn = 'mysql:dbname=' . DB_NAME . ';host=' . DB_HOST;
@@ -49,9 +49,9 @@ function addSubscriber(string $email, string $prenom, string $nom, int $originId
 
     // Insertion de l'email dans la table subscribers
     $sql = 'INSERT INTO abonnes
-            (email, prenom, nom, origine_id, creeLe) 
+            (email, fistname, lastname, origine_id, created_on) 
             VALUES (?,?,?,?, NOW())';
 
     $query = $pdo->prepare($sql);
-    $query->execute([$email, $prenom, $nom, $originId]);
+    $query->execute([$email, $firstname, $lastname, $originId]);
 }
