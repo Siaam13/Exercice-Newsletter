@@ -38,14 +38,14 @@
                 </div>
                 <div class="field-list">
                     <label for="firstname">Prénom</label>
-                    <input type="text" name="firstname" id="firstname" value="<?= $prenom ?>">
+                    <input type="text" name="firstname" id="firstname" value="<?= $firstname ?>">
                     <?php if (isset($errors['firstname'])) : ?>
                         <p class="message error"><?= $errors['firstname']; ?></p>
                     <?php endif; ?>
                 </div>
                 <div class="field-list">
                     <label for="lastname">Nom</label>
-                    <input type="text" name="lastname" id="lastname" value="<?= $nom ?>">
+                    <input type="text" name="lastname" id="lastname" value="<?= $lastname ?>">
                     <?php if (isset($errors['lastname'])) : ?>
                         <p class="message error"><?= $errors['lastname']; ?></p>
                     <?php endif; ?>
